@@ -29,6 +29,7 @@ def self.save
    sql = <<-SQL
       INSERT INTO students (id,name, grade) 
       VALUES (?,?,?)
+      students.save
       SQL
       DB[:conn].execute(sql, self.name, self.grade)
  
