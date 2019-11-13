@@ -27,7 +27,7 @@ end
 
 def self.save 
   sql = <<-SQL 
-      rokhaya.save
+      
       SQL
       DB[:conn].execute(sql)
 end    
