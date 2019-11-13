@@ -24,13 +24,10 @@ def self.drop_table
   SQL
   DB[:conn].execute(sql)
 end 
-Student.create_table
-student = Student.new("Rokhaya", "26")
-student.save
 
 def self.save 
   sql = <<-SQL 
-      
+      student.save
       SQL
       DB[:conn].execute(sql)
 end    
