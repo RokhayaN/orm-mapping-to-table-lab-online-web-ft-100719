@@ -28,20 +28,16 @@ end
 def self.save 
    sql = <<-SQL
       INSERT INTO students (name, grade) 
-      VALUES (?,?)
+      VALUES ("rokhaya",""3th")
       SQL
       DB[:conn].execute(sql, self.name, self.grade)
- @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
+ @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
  
   end
-  Student.create_table
-hello = Student.new("rokhaya", "4th")
-rokhaya.save
-
+ 
  def self.create(name, grade)
-    student = Student.new(name,grade)
-    student.save
-    student
+    rokhaya = Student.new("rokhaya","grade")
+    rokhaya.save
   end
 end
 
