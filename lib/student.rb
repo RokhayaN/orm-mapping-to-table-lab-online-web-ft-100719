@@ -30,7 +30,6 @@ def save
       INSERT INTO students (name, grade) 
       VALUES ("rokhaya",""th")
       SQL
-      DB[:conn].execute(sql)
 @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
 
   end
