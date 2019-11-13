@@ -27,7 +27,7 @@ end
 
 def self.save 
   sql = <<-SQL 
-      student.new.save
+      rokhaya.save
       SQL
       DB[:conn].execute(sql)
 end    
