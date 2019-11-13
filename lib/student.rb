@@ -27,8 +27,8 @@ end
 
 def self.save 
   sql = <<-SQL 
-      INSERT INTO students (id=nil ,name,grade,) 
-      VALUES ("rokhaya","great")
+      INSERT INTO students (id ,name,grade,) 
+      VALUES (nil,"rokhaya","2th")
       SQL
       DB[:conn].execute(sql)
 end    
