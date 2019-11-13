@@ -28,15 +28,18 @@ end
 def save 
    sql = <<-SQL
       INSERT INTO students (name, grade) 
-      VALUES ("rokhaya",""4th")
+      VALUES ("?","?")
       SQL
       DB[:conn].execute(sql)
-
+DB[:conn].execute(sql,name,grade)
+ @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
+ 
   end
  
  def self.create(name, grade)
-    rokhaya = Student.new("rokhaya","3th")
-    rokhaya.save
+    student  = Student.new(name,grade)
+    student.save
+    student
   end
 end
 
