@@ -34,14 +34,9 @@ def self.save
  @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
  
   end
-  Song.create_table
-hello = Song.new("Hello", "25")
-ninety_nine_problems = Song.new("99 Problems", "The Black Album")
- 
-student.save
-ninety_nine_problems.save
-  
-
+  Student.create_table
+hello = Student.new("rokhaya", "4th")
+rokhaya.save
 
  def self.create(name, grade)
     student = Student.new(name,grade)
